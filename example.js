@@ -6,7 +6,7 @@ var ExampleApplication = React.createClass({
             .then(function (response) {
                 console.log(response);
                 var con = document.getElementById("container");
-                con.textContent = response.data.value.toString();
+                con.textContent = response.data.value;
             })
             .catch(function (error) {
                 var con = document.getElementById("container");
