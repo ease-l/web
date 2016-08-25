@@ -81,7 +81,7 @@ function AddImage(projectId, parId, k, level) {
                 var nameIm = jsonarray[i].Name;
                 var imageId = jsonarray[i].Id;
                 var url = jsonarray[i].Url;
-                var newrow = ('<a class = "url" href="http://localhost:63342/r-template/comment.html?idImage=' +imageId+  '">'
+                var newrow = ('<a class = "url" href="http://localhost:63342/r-template/comment.html?idImage=' +imageId+  '&idProject='+projectId+'">'
                 + '<li dblclick="AddProjectToProject()"  id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ imageId +'" style="display: none;" class="icon4">'
                 +nameIm+'</li></a>');
                 var div = document.createElement('li');

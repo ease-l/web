@@ -18,6 +18,9 @@ function param(Name)
 
 function postc() {
     var imageId = param("idImage");
+    console.log("Ok - " + imageId);
+    var projectId = param("idProject");
+    console.log(projectId);
     if(document.getElementById("namec").value == "") {
         alert('Name of comment is empty, please, fill it');
         return;
