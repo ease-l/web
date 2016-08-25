@@ -9,7 +9,7 @@
         function tree(liter) {
             lit=liter;                      //литера
             i=1;                            //счетчик
-            t = setInterval(show, 75);  //развертываем/сворачиваем с заданным интервалом
+            show();  //развертываем/сворачиваем с заданным интервалом
         }
 
         function show() {
@@ -17,8 +17,8 @@
             if(el = document.getElementById(lit + i)) {
                 el.style.display = (el.style.display == 'block')?'none':'block';
                 i++;
+                show();
             }
-            else clearInterval(t);
         }
     </script>
 </head>
@@ -47,9 +47,6 @@
 <p><form><button class="c">Write</button></form></p>
 <p class="a"><b>Comment</b></p>
 <ul class="b" id="comments">
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
 </ul>
 <div id = "name2">
 
@@ -59,7 +56,6 @@
 <script src="build/react-dom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
 <script  type="text/babel" src="scripts/imagewatch.js"></script>
-<script  type="text/babel" src="scripts/commentswatch.js"></script>
 <link rel="stylesheet" href="css/commentcss.css" type="text/css">
 </body>
 </html>
