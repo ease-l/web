@@ -15,7 +15,6 @@ function param(Name)
         }}
     return "";
 }
-
 function postc() {
     var imageId = param("idImage");
     console.log("Ok - " + imageId);
