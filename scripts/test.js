@@ -20,7 +20,7 @@ function addByName( idwr) {
                     AddImage(idwr, idwr, 0, level);
                 }
             }else{
-                var newrow = ('<li dblclick="AddProjectToProject()" id=\'' + idwr +'\''+  'name = "'+ idname +'"  class="icon">' + name + '</li>');
+                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon">' + name + '</li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
@@ -160,7 +160,7 @@ var ExampleApplication = React.createClass({
                     if(projectMas.length > 0){
                         addByNameWithChild(name, id, level);
                     }else {
-                        addByName(id, id, "spisok", 2);
+                        addByName(id);
                     }
                 }
             })
