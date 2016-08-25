@@ -7,9 +7,9 @@
   </head>
 
   <body>
-  <script src="../scripts/js.js"></script>
-  <script src="../scripts/dinamic_add.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <script src="scripts/js.js"></script>
+  <script src="scripts/dinamic_add.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
   <center><font color = "#32CD32"><em><h1>EASE - L</h1></em></font></center>
   <div id="button_new_project"><button>New project</button></div>
   <ul id="spisok" class="parent">
@@ -30,13 +30,32 @@
       </li>
       <li class="icon">something5</li>
   </ul>
-    <a href="http://localhost:63342/r-template/Post.html?_ijt=bq9dbi363rostu89u6aaeso8c7" target="_blank">Post</a>.
-    <a href="http://localhost:63342/r-template/Get.html?_ijt=bq9dbi363rostu89u6aaeso8c7" target="_blank">Get</a>.
+  <script>
+      axios.get('http://localhost:51715/Project')
+              .then(function (response) {
+                  var jsonarray = JSON.parse(response.getData());
+                  for(var i=0;i<jsonarray.size;i++){
+                      var name = jsonarray[i].Name;
+                      add(name);
+                  }
+              })
+              .catch(function (error) {
+                  console.log(error.toString());
+              });
+
+  </script>
+
     <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
-    <script src="../build/react.js"></script>
-    <script src="../build/react-dom.js"></script>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-    <script type="text/babel" src="download.js"></script>
-    <script type="text/babel" src="example.js"></script>
+    <script type="text/babel" src="anned/download.js"></script>
+    <script type="text/babel" src="anned/example.js"></script>
+
+  <div id="textfrominput"></div>
+  <form>
+      <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
+      <input type="button" onclick="add()" value="Новая папка">
+  </form>
   </body>
 </html>
