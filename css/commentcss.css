@@ -1,0 +1,36 @@
+img {
+    margin-left: 30%;
+    width: 40%;
+}
+textarea {
+    margin-left:  30%;
+    width: 40%;
+}
+button.c {
+    margin-left: 60%;
+    width: 10%;
+}
+p.a {
+    margin-left: 30%;
+}
+ul.b {
+    margin-left: 30%;
+}
+li {
+    list-style-type: none;
+}
+button {
+    border: 0;
+}
+li.end {
+    background-image: url("../res/drawable/folder.png");
+    background-repeat: no-repeat;
+    text-indent: 1cm;
+    list-style: none;
+}
+li.plus {
+    background-image: url("../res/drawable/exp.png");
+    background-repeat: no-repeat;
+    text-indent: 1cm;
+    margin-left: -1.1%;
+}
