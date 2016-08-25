@@ -18,7 +18,10 @@ option.icon {
     background-repeat: no-repeat;
     text-indent: 1cm;
 }
-
+a.url{
+    color:black;
+    text-decoration:none;
+}
 li.icon {
     background-image: url("../res/drawable/folder.png");
     background-repeat: no-repeat;

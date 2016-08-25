@@ -33,33 +33,33 @@
       <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-22">
-              <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+            <state relative-caret-position="352">
+              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
               <folding>
-                <marker date="1472134227502" expanded="true" signature="2317:2331" ph="..." />
-                <marker date="1472134227502" expanded="true" signature="3222:3236" ph="..." />
-                <marker date="1472134227502" expanded="true" signature="3951:3965" ph="..." />
-                <marker date="1472134227502" expanded="true" signature="4563:4577" ph="..." />
+                <marker date="1472135445700" expanded="true" signature="2471:2485" ph="..." />
+                <marker date="1472135445700" expanded="true" signature="3376:3390" ph="..." />
+                <marker date="1472135445700" expanded="true" signature="4105:4119" ph="..." />
+                <marker date="1472135445700" expanded="true" signature="4717:4731" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imagewatch.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="imagewatch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/imagewatch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+            <state relative-caret-position="85">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -93,11 +93,11 @@
         <option value="$PROJECT_DIR$/../Test/example.js" />
         <option value="$PROJECT_DIR$/example.js" />
         <option value="$PROJECT_DIR$/Get.html" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/comment.html" />
-        <option value="$PROJECT_DIR$/scripts/test.js" />
         <option value="$PROJECT_DIR$/scripts/imagewatch.js" />
+        <option value="$PROJECT_DIR$/scripts/test.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
       </list>
     </option>
   </component>
@@ -297,12 +297,12 @@
       <workItem from="1472025165770" duration="435000" />
       <workItem from="1472028635884" duration="1512000" />
       <workItem from="1472132544427" duration="744000" />
-      <workItem from="1472134123595" duration="380000" />
+      <workItem from="1472134123595" duration="1514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20950000" />
+    <option name="totallyTimeSpent" value="22084000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -358,10 +358,10 @@
         <state relative-caret-position="2363">
           <caret line="139" column="42" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="42" />
           <folding>
-            <marker date="1472134227502" expanded="true" signature="2317:2331" ph="..." />
-            <marker date="1472134227502" expanded="true" signature="3222:3236" ph="..." />
-            <marker date="1472134227502" expanded="true" signature="3951:3965" ph="..." />
-            <marker date="1472134227502" expanded="true" signature="4563:4577" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="2471:2485" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="3376:3390" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="4105:4119" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="4717:4731" ph="..." />
           </folding>
         </state>
       </provider>
@@ -494,14 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/commentcss.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -518,23 +510,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/imagewatch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state relative-caret-position="352">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
           <folding>
-            <marker date="1472134227502" expanded="true" signature="2317:2331" ph="..." />
-            <marker date="1472134227502" expanded="true" signature="3222:3236" ph="..." />
-            <marker date="1472134227502" expanded="true" signature="3951:3965" ph="..." />
-            <marker date="1472134227502" expanded="true" signature="4563:4577" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="2471:2485" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="3376:3390" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="4105:4119" ph="..." />
+            <marker date="1472135445700" expanded="true" signature="4717:4731" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/imagewatch.js">
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="272">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding />
         </state>
       </provider>

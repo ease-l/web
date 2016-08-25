@@ -3,7 +3,7 @@
  */
 var ExampleApplication = React.createClass({
     render: function () {
-        var imageId = "57bea7e8fcfbb4130ceb1c6b";
+        var imageId = param("idImage");
         axios.get('http://localhost:51715/Image/' + imageId)
     .then(function (response) {
         var jsonobject = response.data.value;
@@ -38,6 +38,20 @@ return ;
 
 });
 
+function param(Name)
+{
+    var Params = location.search.substring(1).split("&");
+    var variable = "";
+    for (var i = 0; i < Params.length; i++)
+    {
+        if(Params[i].split("=")[0] == Name)
+        {
+            if (Params[i].split("=").length > 1)
+                variable = Params[i].split("=")[1];
+            return variable;
+        }}
+    return "";
+}
 
 ReactDOM.render(
     <ExampleApplication />,

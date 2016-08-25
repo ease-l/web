@@ -54,9 +54,11 @@ function AddImage(projectId, parId, k, level) {
             for(var i = 0; i < jsonarray.length; i++){
                 var nameIm = jsonarray[i].Name;
                 console.log(nameIm);
+                var imageId = jsonarray[i].Id;
                 var url = jsonarray[i].Url;
-                var newrow = ('<li  id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ jsonarray[i].Id +'" style="display: none;" class="icon4">'
-                +'' +nameIm+'</li>');
+                var newrow = ('<a class = "url" href="http://localhost:63342/r-template/comment.html?idImage=' +imageId+  '">'
+                + '<li  id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ imageId +'" style="display: none;" class="icon4">'
+                +nameIm+'</li></a>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
