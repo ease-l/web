@@ -27,6 +27,14 @@ li.icon {
     list-style-image: url("../res/drawable/smail.png");
 }
 
+li.icon4 {
+    background-image: url("../res/drawable/image.png");
+    background-repeat: no-repeat;
+    text-indent: 1cm;
+    list-style: none;
+    list-style-image: url("../res/drawable/smail.png");
+}
+
 li.icon3 {
     background-image: url("../res/drawable/folder.png");
     background-repeat: no-repeat;
