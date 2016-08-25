@@ -3,59 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <title>Ease - l</title>
-    <script>
-        var t,lit,i;
-
-        function tree(liter) {
-            lit=liter;                      //литера
-            i=1;                            //счетчик
-            show();  //развертываем/сворачиваем с заданным интервалом
-        }
-
-        function show() {
-            var el;
-            if(el = document.getElementById(lit + i)) {
-                el.style.display = (el.style.display == 'block')?'none':'block';
-                i++;
-                show();
-            }
-        }
-    </script>
 </head>
 <body>
-<h1><i><font color="#32CD32">EASE - L</font></i><center id="name">icon</center></h1>
-<ul>
-    <li class="end">something1</li>
-    <li class="end">something2</li>
-    <li class="end">something3</li>
-    <li class="plus"><a onclick="tree('s')">something4sublist</a>
-        <ul>
-            <li class="end" id="s1" style="display: none;">something41</li>
-            <li class="plus" id="s2" style="display: none;"><a onclick="tree('x')">something42sublist</a>
-                <ul>
-                    <li class="end" id="x1" style="display: none;">something421</li>
-                    <li class="end" id="x2" style="display: none;">something422</li>
-                </ul>
-            </li>
-            <li class="end" id="s3" style="display: none;">something43</li>
-        </ul>
-    </li>
-    <li class="end">something5</li>
-</ul>
-<img id="image" src="res/drawable/noImage.png" alt="No image">
-<p><form><textarea name="comment" placeholder="Write your comment" rows="6"></textarea></form></p>
-<p><form><button class="c">Write</button></form></p>
-<p class="a"><b>Comment</b></p>
-<ul class="b" id="comments">
-</ul>
-<div id = "name2">
+<h1><i><font color="#32CD32">EASE - L</font></i></h1>
+<table WIDTH="100%">
+    <tr width="100%">
+        <td width="30%">
+            <ul id="spisok" class="parent">
 
-</div>
+            </ul>
+        </td>
+        <td width="50%">
+            <h1>
+                <center id="name">icon</center>
+            </h1>
+            <img id="image" src="res/drawable/noImage.png" alt="No image">
+            <p>
+            <form><textarea id="namec" placeholder="Name of your comment" rows="1"></textarea></form>
+            </p>
+            <p>
+            <form><textarea id="comment" placeholder="Write your comment" rows="6"></textarea></form>
+            </p>
+            <p>
+            <form>
+                <button type="button" class="c" onclick="postc()">Write</button>
+            </form>
+            </p>
+            <p class="a"><b>Comment</b></p>
+            <ul class="b" id="comments">
+            </ul>
+            <div id="name2">
+
+            </div>
+        </td>
+        <td width="20%">
+
+        </td>
+    </tr>
+</table>
+<script type="text/babel" src="scripts/test.js"></script>
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
 <script src="build/react.js"></script>
 <script src="build/react-dom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-<script  type="text/babel" src="scripts/imagewatch.js"></script>
+<script src="scripts/postcomment.js"></script>
+<script src="scripts/js.js"></script>
+<script src="scripts/dinamic_add.js"></script>
+<script type="text/babel" src="scripts/imagewatch.js"></script>
 <link rel="stylesheet" href="css/commentcss.css" type="text/css">
 </body>
 </html>

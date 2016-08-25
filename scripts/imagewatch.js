@@ -9,10 +9,6 @@ var ExampleApplication = React.createClass({
         var jsonobject = response.data.value;
         document.getElementById("name").textContent = jsonobject.Name;
         document.getElementById("image").src = jsonobject.Url;
-    })
-    .catch(function (error) {
-        console.log(error.toString());
-    });
         axios.get('http://localhost:51715/Image/' + imageId + '/comment')
             .then(function (response) {
                 for(var i = 0; i < response.data.value.length; ++i) {
@@ -30,6 +26,11 @@ var ExampleApplication = React.createClass({
             .catch(function (error) {
                 console.log(error.toString());
             });
+    })
+    .catch(function (error) {
+        console.log(error.toString());
+        alert("Bad id");
+    });
 return ;
 }
 

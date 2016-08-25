@@ -1,3 +1,9 @@
+
+ul.spisok {
+    margin-bottom: 100%;
+    margin-top: 1cm;
+    margin-left: 1cm;
+}
 img {
     margin-left: 30%;
     width: 40%;
@@ -31,6 +37,6 @@ li.end {
 li.plus {
     background-image: url("../res/drawable/exp.png");
     background-repeat: no-repeat;
-    text-indent: 1cm;
+    text-indent: 1.359cm;
     margin-left: -1.1%;
 }

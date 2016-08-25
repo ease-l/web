@@ -1,4 +1,4 @@
-var t,lit,i;
+var lit,i;
 function tree(liter) {
     lit=liter;
     i=0;
