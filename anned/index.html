@@ -2,12 +2,34 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Basic Example with External JSX</title>
+    <title>Ease - l</title>
     <link rel="stylesheet" href="../shared/css/base.css" />
   </head>
 
   <body>
-    <h1>Basic Example with External JSX</h1>
+  <script src="../scripts/js.js"></script>
+  <script src="../scripts/dinamic_add.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <center><font color = "#32CD32"><em><h1>EASE - L</h1></em></font></center>
+  <div id="button_new_project"><button>New project</button></div>
+  <ul id="spisok" class="parent">
+      <li class="icon">something1</li>
+      <li class="icon">something2</li>
+      <li class="icon">something3</li>
+      <li class="icon2"><a onclick="tree('s')" rollapp-href="">something4sublist</a>
+          <ul>
+              <li class="icon" id="s1" style="display: none;">something41</li>
+              <li id="s2" class="icon2" style="display: none;"><a onclick="tree('x')" rollapp-href="">something42sublist</a>
+                  <ul>
+                      <li class="icon" id="x1" style="display: none;">something421</li>
+                      <li class="icon" id="x2" style="display: none;">something422</li>
+                  </ul>
+              </li>
+              <li class="icon" id="s3" style="display: none;">something43</li>
+          </ul>
+      </li>
+      <li class="icon">something5</li>
+  </ul>
     <a href="http://localhost:63342/r-template/Post.html?_ijt=bq9dbi363rostu89u6aaeso8c7" target="_blank">Post</a>.
     <a href="http://localhost:63342/r-template/Get.html?_ijt=bq9dbi363rostu89u6aaeso8c7" target="_blank">Get</a>.
     <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
