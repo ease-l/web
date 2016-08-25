@@ -1,7 +1,7 @@
 var t,lit,i;
 function tree(liter) {
     lit=liter;
-    i=1;
+    i=0;
     show();  //развертываем/сворачиваем с заданным интервалом
 }
 

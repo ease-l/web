@@ -1,61 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Ease - l</title>
     <link rel="stylesheet" href="../shared/css/base.css" />
-  </head>
+</head>
 
-  <body>
-  <script src="scripts/js.js"></script>
-  <script src="scripts/dinamic_add.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <center><font color = "#32CD32"><em><h1>EASE - L</h1></em></font></center>
-  <div id="button_new_project"><button>New project</button></div>
-  <ul id="spisok" class="parent">
-      <li class="icon">something1</li>
-      <li class="icon">something2</li>
-      <li class="icon">something3</li>
-      <li class="icon2"><a onclick="tree('s')" rollapp-href="">something4sublist</a>
-          <ul>
-              <li class="icon" id="s1" style="display: none;">something41</li>
-              <li id="s2" class="icon2" style="display: none;"><a onclick="tree('x')" rollapp-href="">something42sublist</a>
-                  <ul>
-                      <li class="icon" id="x1" style="display: none;">something421</li>
-                      <li class="icon" id="x2" style="display: none;">something422</li>
-                  </ul>
-              </li>
-              <li class="icon" id="s3" style="display: none;">something43</li>
-          </ul>
-      </li>
-      <li class="icon">something5</li>
-  </ul>
-  <script>
-      axios.get('http://localhost:51715/Project')
-              .then(function (response) {
-                  var jsonarray = JSON.parse(response.getData());
-                  for(var i=0;i<jsonarray.size;i++){
-                      var name = jsonarray[i].Name;
-                      add(name);
-                  }
-              })
-              .catch(function (error) {
-                  console.log(error.toString());
-              });
+<body>
+<script src="scripts/js.js"></script>
+<script src="scripts/dinamic_add.js"></script>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<center><font color = "#32CD32"><em><h1>EASE - L</h1></em></font></center>
+<div id="button_new_project"><button>New project</button></div>
+<ul id="spisok" class="parent">
 
-  </script>
+</ul>
+<script type = "text/babel" src ="test.js"></script>
 
-    <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
-    <script src="build/react.js"></script>
-    <script src="build/react-dom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-    <script type="text/babel" src="anned/download.js"></script>
-    <script type="text/babel" src="anned/example.js"></script>
-
-  <div id="textfrominput"></div>
-  <form>
-      <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
-      <input type="button" onclick="add()" value="Новая папка">
-  </form>
-  </body>
+<script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
+<script src="build/react.js"></script>
+<script src="build/react-dom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+<div id="textfrominput"></div>
+<form>
+    <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
+    <input type="button" onclick="add()" value="Новая папка">
+</form>
+</body>
 </html>
