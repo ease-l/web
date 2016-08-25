@@ -1,0 +1,45 @@
+#button_new_project{
+    border-radius: 5px;
+    margin-left: 30%;
+}
+#button_new_project2{
+    margin-left: 30%;
+    margin-right: -5%;
+}
+select.LeftScrollBlock{
+    overflow:auto;
+    border:none;
+}
+ul.parent{
+    margin-left: 27%;
+}
+option.icon {
+    background-image: url("libs/folder.png");
+    background-repeat: no-repeat;
+    text-indent: 0.5cm;
+}
+
+li.icon {
+    background-image: url("libs/folder.png");
+    background-repeat: no-repeat;
+    text-indent: 1cm;
+    list-style: none;
+    list-style-image: url("libs/smail.png");
+}
+
+li.icon3 {
+    background-image: url("libs/folder.png");
+    background-repeat: no-repeat;
+    text-indent: 1cm;
+    list-style: none;
+    list-style-image: url("libs/smail.png");
+    margin-left: 1.45%;
+}
+
+li.icon2 {
+    background-image: url("libs/krasivayafotochka.png");
+    background-repeat: no-repeat;
+    text-indent: 1cm;
+    list-style: none;
+    margin-left: -1.45%;
+}
