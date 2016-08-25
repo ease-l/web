@@ -3,21 +3,39 @@
 <head>
     <meta charset="utf-8">
     <title>Ease - l</title>
-    <link rel="stylesheet" href="../shared/css/base.css" />
+
+
+
 </head>
 
 <body>
+
 <script src="scripts/js.js"></script>
 <script src="scripts/dinamic_add.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
-<center><font color = "#32CD32"><em><h1>EASE - L</h1></em></font></center>
-<div id="button_new_project"><form>
-    <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
-    <input type="button" onclick="add()" value="Новая папка">
-</form></div>
-<ul id="spisok" class="parent">
 
-</ul>
+<table width="100%">
+    <tr>
+        <td><h1 id="main_header"><i><font color="#32CD32">EASE - L</font></i></h1></td>
+    </tr>
+    <tr class="input">
+        <td>
+        <div id="button_new_project"><form>
+            <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
+            <input type="button" onclick="add()" value="Новая папка">
+        </form></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <ul id="spisok" class="parent">
+
+        </ul>
+        </td>
+    </tr>
+</table>
+
+
 <script type = "text/babel" src ="scripts/test.js"></script>
 
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
