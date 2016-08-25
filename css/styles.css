@@ -30,9 +30,9 @@ li.icon {
 li.icon3 {
     background-image: url("../res/drawable/folder.png");
     background-repeat: no-repeat;
-    text-indent: 1.359cm;
+    text-indent: 1cm;
     list-style: none;
-    margin-left: 1.45%;
+    margin-left: 0.25%;
 }
 
 li.icon2 {
