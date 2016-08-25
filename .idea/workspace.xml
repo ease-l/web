@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="113" selection-start-line="22" selection-start-column="113" selection-end-line="22" selection-end-column="113" />
+            <state relative-caret-position="272">
+              <caret line="16" column="67" selection-start-line="10" selection-start-column="16" selection-end-line="16" selection-end-column="67" />
               <folding>
                 <marker date="1472140416278" expanded="true" signature="3730:3744" ph="..." />
                 <marker date="1472140416278" expanded="true" signature="4668:4682" ph="..." />
@@ -75,11 +75,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="imagewatch.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="imagewatch.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/imagewatch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            <state relative-caret-position="272">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postcomment.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/postcomment.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -88,8 +98,8 @@
       <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+            <state relative-caret-position="238">
+              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -123,11 +133,12 @@
         <option value="$PROJECT_DIR$/../Test/example.js" />
         <option value="$PROJECT_DIR$/example.js" />
         <option value="$PROJECT_DIR$/Get.html" />
-        <option value="$PROJECT_DIR$/scripts/imagewatch.js" />
-        <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/comment.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scripts/test.js" />
+        <option value="$PROJECT_DIR$/css/styles.css" />
+        <option value="$PROJECT_DIR$/scripts/postcomment.js" />
+        <option value="$PROJECT_DIR$/scripts/imagewatch.js" />
       </list>
     </option>
   </component>
@@ -341,12 +352,12 @@
       <workItem from="1472025165770" duration="435000" />
       <workItem from="1472028635884" duration="1512000" />
       <workItem from="1472132544427" duration="744000" />
-      <workItem from="1472134123595" duration="5954000" />
+      <workItem from="1472134123595" duration="7716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26524000" />
+    <option name="totallyTimeSpent" value="28286000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -530,30 +541,6 @@
     <entry file="file://$PROJECT_DIR$/download.js" />
     <entry file="file://$PROJECT_DIR$/example.js" />
     <entry file="file://$PROJECT_DIR$/Get.html" />
-    <entry file="file://$PROJECT_DIR$/css/commentcss.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/imagewatch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/dinamic_add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/js.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -570,14 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -586,16 +565,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/dinamic_add.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/commentcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/postcomment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="113" selection-start-line="22" selection-start-column="113" selection-end-line="22" selection-end-column="113" />
+        <state relative-caret-position="272">
+          <caret line="16" column="67" selection-start-line="10" selection-start-column="16" selection-end-line="16" selection-end-column="67" />
           <folding>
             <marker date="1472140416278" expanded="true" signature="3730:3744" ph="..." />
             <marker date="1472140416278" expanded="true" signature="4668:4682" ph="..." />
             <marker date="1472140416278" expanded="true" signature="5527:5541" ph="..." />
             <marker date="1472140416278" expanded="true" signature="6237:6251" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/imagewatch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
