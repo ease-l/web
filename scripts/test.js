@@ -1,14 +1,14 @@
 function addByName(name) {
     var newrow=('<li  class="icon">'+name+'</li>');
     var div = document.createElement('li');
-    div.style.marginLeft = 1.1+"%";
+    div.style.marginLeft = 1.5+"%";
     div.className = "alert alert-success";
     var v = document.getElementById("quantity").value.toString();
     div.innerHTML = newrow;
     document.getElementById("spisok").appendChild(div);
 }
 
-function addByNameWithChild(name, id) {
+function addByNameWithChild(name, id, level) {
     axios.get('http://localhost:51715/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
@@ -18,12 +18,12 @@ function addByNameWithChild(name, id) {
 
             var newrow=('<li  id=\'' + id +'\''+ ' name = "'+ id +'" class="icon2"><a onclick="tree(\''+id+'\')" rollapp-href="">'+name+'</li>');
             var div = document.createElement('li');
-            div.style.marginLeft = 1.1+"%";
+            div.style.marginLeft = 1.5*level+"%";
             div.className = "alert alert-success";
             div.innerHTML = newrow;
             document.getElementById("spisok").appendChild(div);
             for (var j = 0; j < projectMas.length; j++) {
-                addByNameChild(projectMas[j], id + '' + j, id);
+                addByNameChild(projectMas[j], id + '' + j, id, level);
             }
         })
         .catch(function (error) {
@@ -32,13 +32,14 @@ function addByNameWithChild(name, id) {
 }
 
 
-function addByNameWithChild2(name, id, idwr) {
+function addByNameWithChild2(name, id, idwr, level) {
     axios.get('http://localhost:51715/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
             var projectMas = jsonarray.Projects;
+            level++;
             for (var j = 0; j < projectMas.length; j++) {
-                addByNameChild(projectMas[j], idwr + '' + j, idwr);
+                addByNameChild(projectMas[j], idwr + '' + j, idwr, level);
             }
         })
         .catch(function (error) {
@@ -46,7 +47,7 @@ function addByNameWithChild2(name, id, idwr) {
         });
 }
 
-function AddImage(projectId, parId, k) {
+function AddImage(projectId, parId, k, level) {
     axios.get('http://localhost:51715/Project/'+projectId + '/image')
         .then(function (response) {
             var jsonarray = response.data.value;
@@ -57,7 +58,7 @@ function AddImage(projectId, parId, k) {
                 var newrow = ('<li  id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ jsonarray[i].Id +'" style="display: none;" class="icon4">'
                 +'' +nameIm+'</li>');
                 var div = document.createElement('li');
-                div.style.marginLeft = 1.1 + "%";
+                div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(parId).appendChild(div);
@@ -68,7 +69,8 @@ function AddImage(projectId, parId, k) {
         });
 }
 
-function addByNameChild(namet, idwr, nid) {
+function addByNameChild(namet, idwr, nid, level) {
+
     axios.get('http://localhost:51715/Project/'+namet)
         .then(function (response) {
             var jsonarray = response.data.value;
@@ -78,28 +80,29 @@ function addByNameChild(namet, idwr, nid) {
             if(projectMas.length > 0){
                 var newrow = ('<li  id=\'' + idwr +'\''+ ' name = "'+ idname +'" style="display: none;" class="icon2"><a onclick="tree(\''+idwr+'\')" rollapp-href="">'+name+'</li>');
                 var div = document.createElement('li');
-                div.style.marginLeft = 1.1 + "%";
+                div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
                 if(jsonarray.Images.length > 0) {
-                    AddImage(namet, idwr, projectMas.length);
+                    AddImage(namet, idwr, projectMas.length, level);
                 }
-                addByNameWithChild2(name, idname, idwr);
+                level++;
+                addByNameWithChild2(name, idname, idwr, level);
             }else if(jsonarray.Images.length > 0){
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon2"><a onclick="tree(\''+idwr+'\')" rollapp-href="">' + name + '</li>');
                 var div = document.createElement('li');
-                div.style.marginLeft = 1.1 + "%";
+                div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
                 if(jsonarray.Images.length > 0) {
-                    AddImage(namet, idwr, projectMas.length);
+                    AddImage(namet, idwr, projectMas.length, level);
                 }
             }else{
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon">' + name + '</li>');
                 var div = document.createElement('li');
-                div.style.marginLeft = 1.1 + "%";
+                div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
@@ -113,6 +116,7 @@ function addByNameChild(namet, idwr, nid) {
 var ExampleApplication = React.createClass({
     render: function () {
         var message = 'Response write in console';
+        var level = 2;
         axios.get('http://localhost:51715/Project')
             .then(function (response) {
                 var jsonarray = response.data.value;
@@ -121,7 +125,7 @@ var ExampleApplication = React.createClass({
                     var id = jsonarray[i].Id;
                     var projectMas = jsonarray[i].Projects;
                     if(projectMas.length > 0){
-                        addByNameWithChild(name, id);
+                        addByNameWithChild(name, id, level);
                     }else {
                         addByName(name);
                     }
