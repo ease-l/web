@@ -14,14 +14,21 @@ var ExampleApplication = React.createClass({
                 .then(function (response) {
                     for (var i = 0; i < response.data.value.length; ++i) {
                         var jsonobject = response.data.value[i];
+                        var newrow = ('<li><p><i>'+jsonobject.Name+'</i></p></li>');
                         var div = document.createElement('li');
-                        var div2 = document.createElement('li');
                         div.className = "alert alert-success";
-                        div2.className = "alert alert-success";
-                        div.appendChild(document.createTextNode(jsonobject.Name));
-                        div2.appendChild(document.createTextNode(jsonobject.Text));
+                        div.innerHTML = newrow;
                         document.getElementById("comments").appendChild(div);
-                        document.getElementById("comments").appendChild(div2);
+                        newrow = ('<li><p>'+jsonobject.Text+'</p></li>');
+                        div = document.createElement('li');
+                        div.className = "alert alert-success";
+                        div.innerHTML = newrow;
+                        document.getElementById("comments").appendChild(div);
+                        var newrow = ('<hr>');
+                        var div3 = document.createElement('li');
+                        div3.className = "alert alert-success";
+                        div3.innerHTML = newrow;
+                        document.getElementById("comments").appendChild(div3);
                     }
                 })
                 .catch(function (error) {

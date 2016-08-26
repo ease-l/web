@@ -28,6 +28,7 @@ li.icon {
     background-repeat: no-repeat;
     text-indent: 1cm;
     list-style: none;
+    cursor: pointer;
     list-style-image: url("../res/drawable/smail.png");
 }
 
@@ -36,12 +37,14 @@ li.icon4 {
     background-repeat: no-repeat;
     text-indent: 1cm;
     list-style: none;
+    cursor: pointer;
     list-style-image: url("../res/drawable/smail.png");
 }
 
 li.icon3 {
     background-image: url("../res/drawable/folder.png");
     background-repeat: no-repeat;
+    cursor: pointer;
     text-indent: 1cm;
     list-style: none;
     margin-left: 0.25%;
@@ -52,6 +55,7 @@ li.icon2 {
     background-repeat: no-repeat;
     text-indent: 1.359cm;
     list-style: none;
+    cursor: pointer;
     margin-left: -1.45%;
 }
 
