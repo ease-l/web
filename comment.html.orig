@@ -26,7 +26,11 @@
                 <center id="name">icon</center>
             </h1>
             <img id="image" src="res/drawable/noImage.png" alt="No image">
+<<<<<<< HEAD
+            <button type="button" class="c" onclick="deli()">Delete image</button>
+=======
             <a href="index.html"><button type="button" class="c" onclick="deli()">Delete image</button></a>
+>>>>>>> origin/master
             <p>
             <form><textarea id="namec" placeholder="Name of your comment" rows="1"></textarea></form>
             </p>

@@ -23,8 +23,12 @@ function deli() {
         }
     )
         .then(function (response) {
+<<<<<<< HEAD
             console.log(response);
             window.location.reload();
+=======
+
+>>>>>>> origin/master
         })
         .catch(function (error) {
             alert(error.toString());

@@ -11,7 +11,8 @@ select.LeftScrollBlock{
     border:none;
 }
 ul.parent{
-    margin-left: 27%;
+    margin-left: 0.1%;
+    top: 1cm;
 }
 option.icon {
     background-image: url("../res/drawable/folder.png");
@@ -61,3 +62,21 @@ li.icon2 {
     cursor: pointer;
     margin-left: -1.45%;
 }
+
+#main_header{
+    text-align: center;
+}
+tr.input{
+    text-align: center;
+}
+#button_new_project{
+
+    padding-right: 30%;
+}
+
+#spisok{
+    position: relative;
+    left: 30%;
+}
+
+
