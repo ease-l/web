@@ -5,13 +5,13 @@
     <title>Ease - l</title>
     <link rel="stylesheet" href="../shared/css/base.css" />
 </head>
-
-<body>
+<script src="scripts/readImage.js"></script>
 <script src="scripts/js.js"></script>
 <script src="scripts/dinamic_add.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 <center><font color = "#32CD32"><em><h1>EASE - L</h1></em></font></center>
-<div id="button_new_project"><button>New project</button></div>
+<div id="buttons"><button id="button_new_project" onclick="tree('a')">New project</button></div>
+<input name="input" type="text" class="porno" value="" id="quantity" placeholder="New Project"/>
 <ul id="spisok" class="parent">
 
 </ul>
@@ -22,9 +22,5 @@
 <script src="build/react-dom.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
 <div id="textfrominput"></div>
-<form>
-    <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
-    <input type="button" onclick="add()" value="Новая папка">
-</form>
 </body>
 </html>

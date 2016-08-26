@@ -8,7 +8,7 @@ function addByName(name) {
     document.getElementById("spisok").appendChild(div);
 }
 
-function addByNameWithChild(name, id) {
+function addByNameWithChild(name, id, level) {
     axios.get('http://localhost:51715/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
@@ -18,12 +18,13 @@ function addByNameWithChild(name, id) {
 
             var newrow=('<li  id=\'' + id +'\''+ ' name = "'+ id +'" class="icon2"><a onclick="tree(\''+id+'\')" rollapp-href="">'+name+'</li>');
             var div = document.createElement('li');
-            div.style.marginLeft = 1.1+"%";
+            div.style.marginLeft = 1.1*level+"%";
             div.className = "alert alert-success";
             div.innerHTML = newrow;
             document.getElementById("spisok").appendChild(div);
             for (var j = 0; j < projectMas.length; j++) {
-                addByNameChild(projectMas[j], id + '' + j, id);
+                level++;
+                addByNameChild(projectMas[j], id + '' + j, id, level);
             }
         })
         .catch(function (error) {
@@ -32,14 +33,14 @@ function addByNameWithChild(name, id) {
 }
 
 
-function addByNameWithChild2(name, id, nid) {
+function addByNameWithChild2(name, id, nid, level) {
     axios.get('http://localhost:51715/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
             var name = jsonarray.Name;
             var projectMas = jsonarray.Projects;
             for (var j = 0; j < projectMas.length; j++) {
-                addByNameChild(projectMas[j], id + '' + j, id);
+                addByNameChild(projectMas[j], id + '' + j, id, level);
             }
         })
         .catch(function (error) {
@@ -47,7 +48,7 @@ function addByNameWithChild2(name, id, nid) {
         });
 }
 
-function addByNameChild(namet, idwr, nid) {
+function addByNameChild(namet, idwr, nid, level) {
     axios.get('http://localhost:51715/Project/'+namet)
         .then(function (response) {
             var jsonarray = response.data.value;
@@ -58,15 +59,16 @@ function addByNameChild(namet, idwr, nid) {
             if(projectMas.length > 0){
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon2"><a onclick="tree(\''+id+'\')" rollapp-href="">' + name + '</li>');
                 var div = document.createElement('li');
-                div.style.marginLeft = 1.1 + "%";
+                div.style.marginLeft = 1.1*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
-                addByNameWithChild2(name, id, nid);
+                level++;
+                addByNameWithChild2(name, id, nid, level);
             }else{
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon">' + name + '</li>');
                 var div = document.createElement('li');
-                div.style.marginLeft = 1.1 + "%";
+                div.style.marginLeft = 1.1*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
@@ -80,6 +82,7 @@ function addByNameChild(namet, idwr, nid) {
 
 var ExampleApplication = React.createClass({
     render: function () {
+        var level = 1;
         var message = 'Response write in console';
         axios.get('http://localhost:51715/Project')
             .then(function (response) {
@@ -89,7 +92,8 @@ var ExampleApplication = React.createClass({
                     var id = jsonarray[i].Id;
                     var projectMas = jsonarray[i].Projects;
                     if(projectMas.length > 0){
-                        addByNameWithChild(name, id);
+                        level++;
+                        addByNameWithChild(name, id, level);
                     }else {
                         addByName(name);
                     }
