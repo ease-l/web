@@ -14,6 +14,26 @@ function tree(liter) {
         }
     }
     console.log(uploadProjectId);
+    if(document.getElementById("deleteBox").checked) {
+        
+        var del = confirm("Delete project?");
+        if(del){
+            axios({
+                    method: 'delete',
+                    url: 'http://localhost:51715/project/' + uploadProjectId ,
+                    data: {}
+                }
+            )
+                .then(function (response) {
+                    window.location.reload();
+                    return;
+                })
+                .catch(function (error) {
+                    console.log(error.toString());
+                    return;
+                });
+        }
+    }
     show();
     if(addButtons == false){
         addButtons = true;
@@ -33,4 +53,3 @@ function show() {
         }
     }
 }
-
