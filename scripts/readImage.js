@@ -179,7 +179,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob) {
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
                 console.log(imageBytes);
-
+                upload();
             }
 
             fr = new FileReader();

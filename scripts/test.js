@@ -21,7 +21,7 @@ function addByName( idwr) {
                     AddImage(idwr, idwr, 0, level);
                 }
             }else{
-                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon"><p oncontextmenu="AddProjectToProject(\''+idwr+'\');">'
+                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon">'+'<a onclick="tree(\''+idwr+'\')" rollapp-href="">'+'<p oncontextmenu="AddProjectToProject(\''+idwr+'\');">'
                 + name + '</p></li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";

@@ -4,10 +4,11 @@ var uploadProjectId;
 function tree(liter) {
     lit=liter;
     var s =  document.getElementById(lit).innerHTML;
+    console.log(s);
     uploadProjectId = "";
     for(var i = 0; i < s.length; i++){
-        if(s[i] == 'n' && s[i+1] == 'a'&& s[i+2] == 'm'&& s[i+3] == 'e'&& s[i+4] == '='&& s[i+5] == '"'){
-            for(var j = i+6; s[j]!='"'; j++)
+        if(s[i] == 't' && s[i+1] == 'r'&& s[i+2] == 'e'&& s[i+3] == 'e'&& s[i+4] == '('&& s[i+5] == '\''){
+            for(var j = i+6; s[j]!='\''; j++)
                 uploadProjectId+=s[j];
             break;
         }
