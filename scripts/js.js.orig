@@ -29,7 +29,10 @@ function show() {
         show();
     }
 }
+<<<<<<< HEAD
 
 function AddProjectToProject () {
     alert("+");
 }
+=======
+>>>>>>> origin/master

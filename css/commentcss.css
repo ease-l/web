@@ -1,9 +1,5 @@
 
-ul.spisok {
-    margin-bottom: 100%;
-    margin-top: 1cm;
-    margin-left: 1cm;
-}
+
 img {
     margin-left: 30%;
     width: 40%;
@@ -39,4 +35,12 @@ li.plus {
     background-repeat: no-repeat;
     text-indent: 1.359cm;
     margin-left: -1.1%;
+}
+
+#dev {
+    width: 30%;
+    position: fixed;
+    margin-bottom: 100%;
+    top: 2cm;
+    margin-left: -10%;
 }
