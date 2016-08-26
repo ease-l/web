@@ -1,7 +1,6 @@
 var lit,i, addButtons = false;
 function tree(liter) {
     lit=liter;
-    i=0;
     show();  //развертываем/сворачиваем с заданным интервалом
     if(addButtons == false){
         addButtons = true;
@@ -23,9 +22,10 @@ function tree(liter) {
 
 function show() {
     var el;
-    if(el = document.getElementById(lit + i)) {
-        el.style.display = (el.style.display == 'block')?'none':'block';
-        i++;
-        show();
+    for(var i = 0; i < 100; i++)
+    {
+        if (el = document.getElementById(lit + i)) {
+            el.style.display = (el.style.display == 'block') ? 'none' : 'block';
+        }
     }
 }
