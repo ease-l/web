@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef5a4e79-86be-4565-9a59-1fa31d254a01" name="Default" comment="Merge branch 'fix' of https://github.com/ease-l/web&#10;&#10;# Conflicts:&#10;#&#9;index.html&#10;#&#9;scripts/js.js&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/npm.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/uploadImage.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/js.js" afterPath="$PROJECT_DIR$/scripts/js.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/readImage.js" afterPath="$PROJECT_DIR$/scripts/readImage.js" />
     </list>
     <ignored path="r-template.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,13 +25,50 @@
     <favorites_list name="r-template" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="691">
+              <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+              <folding>
+                <marker date="1472205151720" expanded="true" signature="4139:4153" ph="..." />
+                <marker date="1472205151720" expanded="true" signature="5110:5124" ph="..." />
+                <marker date="1472205151720" expanded="true" signature="5955:5969" ph="..." />
+                <marker date="1472205151720" expanded="true" signature="6701:6715" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="197">
+              <caret line="27" column="54" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="54" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readImage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/readImage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uploadImage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/uploadImage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="n#!!doc;n#upload#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,16 +88,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="imagedelete.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/imagedelete.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,11 +119,12 @@
         <option value="$PROJECT_DIR$/scripts/test.js" />
         <option value="$PROJECT_DIR$/css/styles.css" />
         <option value="$PROJECT_DIR$/scripts/dinamic_add.js" />
-        <option value="$PROJECT_DIR$/scripts/js.js" />
-        <option value="$PROJECT_DIR$/scripts/readImage.js" />
         <option value="$PROJECT_DIR$/scripts/imagedelete.js" />
         <option value="$PROJECT_DIR$/comment.html" />
+        <option value="$PROJECT_DIR$/scripts/js.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/readImage.js" />
+        <option value="$PROJECT_DIR$/scripts/uploadImage.js" />
       </list>
     </option>
   </component>
@@ -121,8 +137,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -177,7 +193,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -456,6 +472,7 @@
       <workItem from="1472193976444" duration="4172000" />
       <workItem from="1472199069290" duration="3431000" />
       <workItem from="1472202535374" duration="1614000" />
+      <workItem from="1472205161728" duration="4006000" />
     </task>
     <task id="LOCAL-00001" summary="index activity">
       <created>1472111427984</created>
@@ -510,13 +527,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42266000" />
+    <option name="totallyTimeSpent" value="46272000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30161053" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30101395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -599,14 +616,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/dinamic_add.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -746,30 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/readImage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/js.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
@@ -788,9 +773,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/imagedelete.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="527">
+          <caret line="31" column="11" selection-start-line="19" selection-start-column="4" selection-end-line="31" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/js.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+          <folding>
+            <marker date="1472205151720" expanded="true" signature="4139:4153" ph="..." />
+            <marker date="1472205151720" expanded="true" signature="5110:5124" ph="..." />
+            <marker date="1472205151720" expanded="true" signature="5955:5969" ph="..." />
+            <marker date="1472205151720" expanded="true" signature="6701:6715" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,6 +804,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/readImage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -810,11 +832,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/scripts/uploadImage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="n#!!doc;n#upload#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

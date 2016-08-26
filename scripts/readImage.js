@@ -54,7 +54,7 @@ function onFilesSelect(e) {
     // получаем объект FileList
     var files = e.files,
         // div, куда помещается таблица с информацией о файлах
-        output = document.getElementById('invalid'),
+        output = document.getElementById('upload'),
         // таблица с информацией
         table = document.createElement('table'),
         // её тело
@@ -69,6 +69,7 @@ function onFilesSelect(e) {
         data;
 
     // Чистим контейнер с таблицей
+    console.log(output);
     output.innerHTML = '';
 
     // Вставляем в таблицу её тело
@@ -92,6 +93,7 @@ function onFilesSelect(e) {
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
                 console.log(imageBytes);
+                upload(imageBytes);
             }
 
             fr = new FileReader();
