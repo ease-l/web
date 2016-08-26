@@ -42,6 +42,7 @@ function addByNameWithChild(l, id, level) {
             var name = jsonarray.Name;
             var id = jsonarray.Id;
             var projectMas = jsonarray.Projects;
+
             var newrow=('<li id=\'' + id +'\''+ ' name = "'+ id +'" class="icon2"><a onclick="tree(\''+id+
             '\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+id+'\');">'
             +name+'</p></li>');
@@ -123,11 +124,11 @@ function addByNameChild(namet, idwr, nid, level) {
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
-                addByNameWithChild2(name, idname, idwr, level);
                 if(jsonarray.Images.length > 0) {
                     AddImage(namet, idwr, projectMas.length, level);
                 }
                 level++;
+                addByNameWithChild2(name, idname, idwr, level);
             }else if(jsonarray.Images.length > 0){
                 console.log(name);
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon2">'+
