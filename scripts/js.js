@@ -33,12 +33,35 @@ function show() {
 
 
 function upload(imagebytes) {
-    var request = new XMLHttpRequest();
+    /*var request = new XMLHttpRequest();
     request.open('POST', 'http://httpbin.org/post', false);
     var formData = new FormData();
     formData.append("uploadImage",imagebytes);
     request.send(formData);
-    console.log(request.response);
+    console.log(request.response);*/
+    var boundary = String(Math.random()).slice(2);
+    var boundaryMiddle = '--' + boundary + '\r\n';
+    var boundaryLast = '--' + boundary + '--\r\n'
+
+    var body = ['\r\n'];
+        // добавление поля
+        body.push('Content-Disposition: form-data; name="uploadImage"\r\n\r\n' +imagebytes + '\r\n');
+
+    body = body.join(boundaryMiddle) + boundaryLast;
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', '/submit', true);
+
+    xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState != 4)
+            console.log("(_!_)");
+
+        alert( this.responseText );
+    }
+
+    xhr.send(body);
 }
 
 function AddProjectToProject () {
