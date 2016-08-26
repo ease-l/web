@@ -21,7 +21,7 @@ function tree(liter) {
         button2.onclick = function () {
             upload();
         }
-        document.getElementById("buttons").appendChild(button2);
+        show();
     }
 }
 
@@ -33,6 +33,7 @@ function show() {
         show();
     }
 }
+
 function upload(imagebytes) {
     var request = require('request');
     var FormData = require('form-data');
