@@ -23,7 +23,8 @@ function deli() {
         }
     )
         .then(function (response) {
-            alert("Test");
+            alert("Ok");
+            document.location.href='index.html';
         })
         .catch(function (error) {
             alert(error.toString());
