@@ -93,7 +93,7 @@ function onFilesSelect(e) {
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
                 console.log(imageBytes);
-                upload(imageBytes);
+                upload();
             }
 
             fr = new FileReader();
