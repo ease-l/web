@@ -1,4 +1,5 @@
 
+
 /*
  * Функция для добавления строки (<tr>),
  * содержащей информацию о файле
@@ -87,10 +88,10 @@ function onFilesSelect(e) {
             data = [file.name, file.type, file.size];
 
             var fileReader = new FileReader();
-            fileReader.readAsArrayBuffer(files[i]);
+            fileReader.readAsArrayBuffer(file);
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
-                upload(imageBytes);
+                console.log(imageBytes);
             }
 
             fr = new FileReader();
