@@ -33,14 +33,12 @@ function show() {
     }
 }
 function upload(imagebytes) {
-    var request = require('request');
-    var FormData = require('form-data');
-    var form = new FormData();
-    form.append('uploadImage', imagebytes,
-        {contentType: 'image/png', filename: 'image.png'});
-    var r = request.post('http://ease-l.xyz/Image/Download', requestCallback);
-    r._form = form;
-    r.setHeader('content-length', form.getLength());
+    var request = new XMLHttpRequest();
+    request.open('POST', 'http://httpbin.org/post', false);
+    var formData = new FormData();
+    formData.append("uploadImage",imagebytes);
+    request.send(formData);
+    console.log(request.response);
 }
 
 function AddProjectToProject () {
