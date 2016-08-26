@@ -16,7 +16,6 @@ function param(Name) {
 function deli() {
     var imageId = param("idImage");
     var projectId = param("idProject");
-    console.log("123546");
     axios({
             method: 'delete',
             url: 'http://localhost:51715/Project/' + projectId + '/image/' + imageId,
@@ -24,8 +23,8 @@ function deli() {
         }
     )
         .then(function (response) {
-            alert(response);
             console.log(response);
+            window.location.reload();
         })
         .catch(function (error) {
             alert(error.toString());

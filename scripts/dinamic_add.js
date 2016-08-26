@@ -1,11 +1,21 @@
 function add() {
-    var newrow=('<li  class="icon2">'+document.getElementById("quantity").value.toString()+'</li>');
-    var div = document.createElement('li');
-    div.style.marginLeft = 1.1+"%";
-    div.className = "alert alert-success";
-    var v = document.getElementById("quantity").value.toString();
-    div.innerHTML = newrow;
-    document.getElementById("spisok").appendChild(div);
+    var name = document.getElementById("quantity").value.toString();
+    axios({
+            method: 'post',
+            url: 'http://localhost:51715/project/',
+            data: {
+                Name: name,
+            }
+        }
+    )
+        .then(function (response) {
+            window.location.reload();
+            return;
+        })
+        .catch(function (error) {
+            console.log(error.toString());
+            return;
+        });
 }
 
 function addByName(name) {
@@ -13,7 +23,7 @@ function addByName(name) {
     var div = document.createElement('li');
     div.style.marginLeft = 1.1+"%";
     div.className = "alert alert-success";
-    var v = document.getElementById("quantity").value.toString();
+    var name = document.getElementById("quantity").value.toString();
     div.innerHTML = newrow;
     document.getElementById("s2").appendChild(div);
 }

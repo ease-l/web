@@ -13,3 +13,7 @@ function show() {
         show();
     }
 }
+
+function AddProjectToProject () {
+    alert("+");
+}

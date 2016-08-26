@@ -6,10 +6,11 @@ function addByName( idwr) {
             var jsonarray = response.data.value;
             console.log(jsonarray);
             var name = jsonarray.Name;
+            console.log(jsonarray);
             if(jsonarray.Images.length > 0){
                 console.log(name);
-                var newrow = ('<li  id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon2">'+
-                '<a onclick="tree(\''+idwr+'\')" rollapp-href="">' + name + '</li>');
+                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon2">'+
+                '<a onclick="tree(\''+idwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+idwr+'\');">' + name + '</p></li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
@@ -20,7 +21,8 @@ function addByName( idwr) {
                     AddImage(idwr, idwr, 0, level);
                 }
             }else{
-                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon">' + name + '</li>');
+                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon"><p oncontextmenu="AddProjectToProject(\''+idwr+'\');">'
+                + name + '</p></li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
@@ -33,7 +35,7 @@ function addByName( idwr) {
         });
 }
 
-function addByNameWithChild(name, id, level) {
+function addByNameWithChild(l, id, level) {
     axios.get('http://localhost:51715/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
@@ -41,7 +43,9 @@ function addByNameWithChild(name, id, level) {
             var id = jsonarray.Id;
             var projectMas = jsonarray.Projects;
 
-            var newrow=('<li dblclick="AddProjectToProject()" id=\'' + id +'\''+ ' name = "'+ id +'" class="icon2"><a onclick="tree(\''+id+'\')" rollapp-href="">'+name+'</li>');
+            var newrow=('<li id=\'' + id +'\''+ ' name = "'+ id +'" class="icon2"><a onclick="tree(\''+id+
+            '\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+id+'\');">'
+            +name+'</p></li>');
             var div = document.createElement('li');
             div.style.marginLeft = 1.5*level+"%";
             div.className = "alert alert-success";
@@ -49,6 +53,9 @@ function addByNameWithChild(name, id, level) {
             document.getElementById("spisok").appendChild(div);
             for (var j = 0; j < projectMas.length; j++) {
                 addByNameChild(projectMas[j], id + '' + j, id, level);
+            }
+            if(jsonarray.Images.length > 0){
+                AddImage(id, id, projectMas.length, level);
             }
         })
         .catch(function (error) {
@@ -66,6 +73,10 @@ function addByNameWithChild2(name, id, idwr, level) {
             for (var j = 0; j < projectMas.length; j++) {
                 addByNameChild(projectMas[j], idwr + '' + j, idwr, level);
             }
+
+            if(jsonarray.Images.length > 0){
+                AddImage(id, idwr, projectMas.length, level);
+            }
         })
         .catch(function (error) {
             console.log(error.toString());
@@ -82,7 +93,7 @@ function AddImage(projectId, parId, k, level) {
                 var imageId = jsonarray[i].Id;
                 var url = jsonarray[i].Url;
                 var newrow = ('<a class = "url" href="http://localhost:63342/r-template/comment.html?idImage=' +imageId+  '&idProject='+projectId+'">'
-                + '<li dblclick="AddProjectToProject()"  id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ imageId +'" style="display: none;" class="icon4">'
+                + '<li id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ imageId +'" style="display: none;" class="icon4">'
                 +nameIm+'</li></a>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
@@ -97,23 +108,22 @@ function AddImage(projectId, parId, k, level) {
 }
 
 function addByNameChild(namet, idwr, nid, level) {
-
     axios.get('http://localhost:51715/Project/'+namet)
         .then(function (response) {
             var jsonarray = response.data.value;
             var name = jsonarray.Name;
             var idname = jsonarray.Id;
             var projectMas = jsonarray.Projects;
+            console.log(jsonarray);
+            console.log(namet);
             if(projectMas.length > 0){
-                var newrow = ('<li dblclick="AddProjectToProject()"  id=\'' + idwr +'\''+ ' name = "'+ idname +'" style="display: none;" class="icon2">'+
-                '<a onclick="tree(\''+idwr+'\')" rollapp-href="">'+name+'</li>');
+                var newrow = ('<li id=\'' + idwr +'\''+ ' name = "'+ idname +'" style="display: none;" class="icon2">'+
+                '<a onclick="tree(\''+idwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+idname+'\');" >'+name+'</p></li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
-                console.log("+");
-                console.log(jsonarray);
                 if(jsonarray.Images.length > 0) {
                     AddImage(namet, idwr, projectMas.length, level);
                 }
@@ -121,19 +131,19 @@ function addByNameChild(namet, idwr, nid, level) {
                 addByNameWithChild2(name, idname, idwr, level);
             }else if(jsonarray.Images.length > 0){
                 console.log(name);
-                var newrow = ('<li  id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon2">'+
-                '<a onclick="tree(\''+idwr+'\')" rollapp-href="">' + name + '</li>');
+                var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon2">'+
+                '<a onclick="tree(\''+idwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+idname+'\');" >' + name + '</p></li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 document.getElementById(nid).appendChild(div);
                 if(jsonarray.Images.length > 0) {
-                    console.log("+" + name);
                     AddImage(namet, idwr, projectMas.length, level);
                 }
             }else{
-                var newrow = ('<li dblclick="AddProjectToProject()" id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon">' + name + '</li>');
+                var newrow = ('<li oncontextmenu="AddProjectToProject(\''+idname+'\');" id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon">'
+                +'<p oncontextmenu="AddProjectToProject(\''+idname+'\');"  >'+ name + '</p></li>');
                 var div = document.createElement('li');
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
@@ -154,11 +164,11 @@ var ExampleApplication = React.createClass({
             .then(function (response) {
                 var jsonarray = response.data.value;
                 for (var i = 0; i < jsonarray.length; i++) {
-                    var name = jsonarray[i].Name;
                     var id = jsonarray[i].Id;
+                    console.log(jsonarray[i]);
                     var projectMas = jsonarray[i].Projects;
                     if(projectMas.length > 0){
-                        addByNameWithChild(name, id, level);
+                        addByNameWithChild(id, id, level);
                     }else {
                         addByName(id);
                     }
@@ -176,3 +186,4 @@ ReactDOM.render(
     <ExampleApplication />,
     document.getElementById('textfrominput')
 );
+
