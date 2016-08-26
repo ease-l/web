@@ -3,9 +3,6 @@
 <head>
     <meta charset="utf-8">
     <title>Ease - l</title>
-
-
-
 </head>
 
 <body>
@@ -14,6 +11,7 @@
 <script src="scripts/projects.js"></script>
 <script src="scripts/dinamic_add.js"></script>
 <script src="scripts/readImage.js"></script>
+<script src="scripts/test.js"></script>
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <table width="100%">
@@ -22,17 +20,11 @@
     </tr>
     <tr class="input">
         <td>
-        <div id="button_new_project"><form>
-            <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
-            <input type="button" onclick="add()" value="Новая папка">
-        </form></div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-        <ul id="spisok" class="parent">
-
-        </ul>
+            <div id="button_new_project"><form>
+                <input name="input" type="text" value="Новая папка" id="quantity" placeholder="New Project">
+                <input type="button" onclick="add()" value="Новая папка">
+                <input type="file" id="invalid" value="read" onchange="onFilesSelect(this)"/>
+            </form></div>
         </td>
     </tr>
 </table>
