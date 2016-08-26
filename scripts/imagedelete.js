@@ -14,6 +14,7 @@ function param(Name) {
     return "";
 }
 function deli() {
+
     var imageId = param("idImage");
     var projectId = param("idProject");
     axios({
