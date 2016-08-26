@@ -12,11 +12,12 @@ function tree(liter) {
             read();
         };
         button1.className = "alert alert-success";
-        document.getElementById("buttons").appendChild(button1);
+        document.getElementById("button_new_project").appendChild(button1);
         var button2 = document.createElement('button');
         button2.id = "button_upload";
         button2.innerText = "Upload";
         button2.className = "alert alert-success";
+        document.getElementById("button_new_project").appendChild(button2);
         button2.onclick = function () {
             upload();
         }
