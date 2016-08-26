@@ -90,7 +90,7 @@ function onFilesSelect(e) {
             fileReader.readAsArrayBuffer(files[i]);
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
-                console.log(imageBytes);
+                upload(imageBytes);
             }
 
             fr = new FileReader();
