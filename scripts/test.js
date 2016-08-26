@@ -42,7 +42,6 @@ function addByNameWithChild(l, id, level) {
             var name = jsonarray.Name;
             var id = jsonarray.Id;
             var projectMas = jsonarray.Projects;
-
             var newrow=('<li id=\'' + id +'\''+ ' name = "'+ id +'" class="icon2"><a onclick="tree(\''+id+
             '\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+id+'\');">'
             +name+'</p></li>');

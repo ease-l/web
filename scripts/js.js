@@ -1,8 +1,8 @@
-var lit,i;
-var addButtons = false;
+var lit,i, addButtons = false;
 function tree(liter) {
     lit=liter;
     i=0;
+    show();  //развертываем/сворачиваем с заданным интервалом
     if(addButtons == false){
         addButtons = true;
         var button1 = document.createElement('button');
@@ -12,12 +12,12 @@ function tree(liter) {
             read();
         };
         button1.className = "alert alert-success";
-        document.getElementById("buttons").appendChild(button1);
+        document.getElementById("test").appendChild(button1);
         var button2 = document.createElement('button');
         button2.id = "button_upload";
         button2.innerText = "Upload";
         button2.className = "alert alert-success";
-        document.getElementById("buttons").appendChild(button2);
+        document.getElementById("test").appendChild(button2);
     }
 }
 
@@ -28,8 +28,4 @@ function show() {
         i++;
         show();
     }
-}
-
-function AddProjectToProject () {
-    alert("+");
 }
