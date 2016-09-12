@@ -7,15 +7,16 @@ function tree(liter) {
     console.log(s);
     uploadProjectId = "";
     for(var i = 0; i < s.length; i++){
-        if(s[i] == 't' && s[i+1] == 'r'&& s[i+2] == 'e'&& s[i+3] == 'e'&& s[i+4] == '('&& s[i+5] == '\''){
+        if(s[i] == 'j' && s[i+1] == 'e'&& s[i+2] == 'c'&& s[i+3] == 't'&& s[i+4] == '('&& s[i+5] == '\''){
             for(var j = i+6; s[j]!='\''; j++)
                 uploadProjectId+=s[j];
             break;
         }
     }
     console.log(uploadProjectId);
-    if(document.getElementById("deleteBox").checked) {
-        
+    var e = document.getElementById("deleteBox");
+    if(e!=null && e.checked) {
+
         var del = confirm("Delete project?");
         if(del){
             axios({
@@ -35,14 +36,6 @@ function tree(liter) {
         }
     }
     show();
-    if(addButtons == false){
-        addButtons = true;
-        var button2 = document.createElement('button');
-        button2.id = "button_upload";
-        button2.innerText = "Upload";
-        button2.className = "alert alert-success";
-        document.getElementById("button_new_project").appendChild(button2);
-    }
 }
 
 function show() {

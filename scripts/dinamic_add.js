@@ -1,5 +1,5 @@
 function add() {
-    var name = document.getElementById("quantity").value.toString();
+    var name = document.getElementById("input").value.toString();
     axios({
             method: 'post',
             url: 'http://localhost:51715/project/',

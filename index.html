@@ -6,8 +6,8 @@
 </head>
 
 <body>
-<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
---><script src="scripts/js.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="scripts/js.js"></script>
 <script src="scripts/projects.js"></script>
 <script src="scripts/dinamic_add.js"></script>
 <script src = "scripts/uploadImage.js"></script>
@@ -21,20 +21,32 @@
     </tr>
     <tr class="input">
         <td>
-            <div id="button_new_project"><form>
-                <div class="form_group">
-                <input name="input" class="form-control col-sm-2" type="text" value="Новая папка" id="quantity" placeholder="New Project">
-                <input type="button" class="btn btn-success" onclick="add()" value="Новая папка">
-                    <input type="checkbox" id = "deleteBox" checked>
-                    <p>Delete Projects</p>
-                <input type="file" class="" id="upload" value="read" onchange="onFilesSelect(this)"/>
-                </div>
-            </form></div>
+            <div id="button_new_project">
+                <form class="form-horizontal">
+
+                    <div id="bottom-header">
+                        <input id="input" name="input" type="text" class="form-control col-sm-3" value="Name" placeholder="New Project">
+                        <input id="add_button" type="button" class="btn btn-success col-sm-3" onclick="add()" value="Add new project"><label for="check" class="control-label " >Delete Project</label>
+                        <div id="check"><input  type="checkbox" id="deleteBox" unchecked></div>
+                        <input type="file" class="" id="upload" value="read" onchange="onFilesSelect(this)"/>
+                    </div>
+
+                </form>
+            </div>
+            <div id="test">
+            </div>
+        </td>
+    </tr>
+    <tr id="twobuttons">
+        <td>
+            <div id="for2buttons">
+
+            </div>
         </td>
     </tr>
     <tr>
         <td>
-            <ul id="spisok">
+            <ul id="spisok" class="parent">
 
             </ul>
         </td>

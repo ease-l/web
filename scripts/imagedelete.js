@@ -25,7 +25,7 @@ function deli() {
     )
         .then(function (response) {
             console.log(response);
-            window.location.reload();
+            window.history.back();
         })
         .catch(function (error) {
             alert(error.toString());
