@@ -33,7 +33,9 @@ function postc() {
             url: 'http://localhost:51715/Image/'+imageId + '/comment',
             data: {
                 Name: document.getElementById("namec").value,
-                Text: document.getElementById("comment").value
+                Text: document.getElementById("comment").value,
+                x: x1,
+                y: y1
             }
         }
     )

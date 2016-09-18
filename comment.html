@@ -38,7 +38,10 @@
             <h1>
                 <center id="name">icon</center>
             </h1>
-            <img id="image" src="res/drawable/noImage.png" alt="No image">
+            <div id="cont">
+                <img id="canvas" />
+                <canvas id="image" width="400px" height="300px"></canvas>
+            </div>
             <button id="delete_image" onclick="deli()" type="button" class="btn btn-info" >Delete image</button>
             <div id="upload3"><input type="file" class="form-control" id="upload2" value="read" onchange="onFilesSelect2(this)"/></div>
             <button type="button" class="btn btn-default c" onclick="upload2()" >Upload</button>
@@ -68,10 +71,11 @@
 <div id ="textfrominput">
 
 </div>
+<link rel="stylesheet" href="css/commentcss.css" type="text/css">
+<script src="scripts/attachment.js"></script>
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
 <script type="text/babel" src="scripts/imagewatch.js"></script>
-<link rel="stylesheet" href="css/commentcss.css" type="text/css">
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 </body>
 </html>
