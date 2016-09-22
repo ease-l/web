@@ -21,7 +21,7 @@ function tree(liter) {
         if(del){
             axios({
                     method: 'delete',
-                    url: 'http://localhost:51715/project/' + uploadProjectId ,
+                    url: 'http://api.ease-l.xyz/project/' + uploadProjectId ,
                     data: {}
                 }
             )

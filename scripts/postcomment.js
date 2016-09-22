@@ -30,7 +30,7 @@ function postc() {
     }
     axios({
             method: 'post',
-            url: 'http://localhost:51715/Image/'+imageId + '/comment',
+            url: 'http://api.ease-l.xyz/Image/'+imageId + '/comment',
             data: {
                 Name: document.getElementById("namec").value,
                 Text: document.getElementById("comment").value,

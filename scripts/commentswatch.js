@@ -4,7 +4,7 @@
 var ExampleApplication = React.createClass({
     render: function () {
         var imageId = "57bd9657fcfbb420e475f20e";
-        axios.get('http://localhost:51715/Image/' + imageId + '/comment')
+        axios.get('http://api.ease-l.xyz/Image/' + imageId + '/comment')
             .then(function (response) {
                 var jsonobject = response.data.value;
                 var div = document.createElement('li');

@@ -2,7 +2,7 @@ function add() {
     var name = document.getElementById("input").value.toString();
     axios({
             method: 'post',
-            url: 'http://localhost:51715/project/',
+            url: 'http://api.ease-l.xyz/project/',
             data: {
                 Name: name,
             }

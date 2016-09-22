@@ -6,7 +6,7 @@ function upload() {
     console.log("+");
     var data = new FormData();
     data.append("uploadImage", document.getElementById('upload').files[0]);
-    axios.put("http://localhost:51715/Download", data).then(function (response) {
+    axios.put("http://api.ease-l.xyz/Download", data).then(function (response) {
         var url = response.data.value.Result;
         uploadimageup(url);
         console.log(response.data.value);
@@ -34,7 +34,7 @@ function uploadimageup(url) {
     }
     data.Name = imageName;
     data.Url = url;
-    axios.post("http://localhost:51715/Project/"+uploadProjectId+"/image",data).
+    axios.post("http://api.ease-l.xyz/Project/"+uploadProjectId+"/image",data).
     then(function (response) {
         console.log(uploadProjectId);
             alert("Image Add");
@@ -61,7 +61,7 @@ function upload2() {
     var data = new FormData();
     var imageId = param("idImage");
     data.append("uploadImage", document.getElementById('upload2').files[0]);
-    axios.put("http://localhost:51715/Download", data).then(function (response) {
+    axios.put("http://api.ease-l.xyz/Download", data).then(function (response) {
         var urlIm = response.data.value.Result;
         var imageName = "";
         var s = document.getElementById("upload2").textContent;
@@ -74,7 +74,7 @@ function upload2() {
         }
         axios({
                 method: 'put',
-                url: 'http://localhost:51715/image/' + imageId ,
+                url: 'http://api.ease-l.xyz/image/' + imageId ,
                 data: {
                     name:imageName,
                     url:urlIm

@@ -1,7 +1,7 @@
 function addByName( idwr) {
     console.log("Kapec polni");
     var level = 2;
-    axios.get('http://localhost:51715/Project/'+idwr)
+    axios.get('http://api.ease-l.xyz/Project/'+idwr)
         .then(function (response) {
             var jsonarray = response.data.value;
             console.log(jsonarray);
@@ -33,7 +33,7 @@ function addByName( idwr) {
 }
 
 function addByNameWithChild(l, id, level) {
-    axios.get('http://localhost:51715/Project/'+id)
+    axios.get('http://api.ease-l.xyz/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
             var name = jsonarray.Name;
@@ -64,7 +64,7 @@ function addByNameWithChild(l, id, level) {
 
 
 function addByNameWithChild2(name, id, idwr, level) {
-    axios.get('http://localhost:51715/Project/'+id)
+    axios.get('http://api.ease-l.xyz/Project/'+id)
         .then(function (response) {
             var jsonarray = response.data.value;
             var projectMas = jsonarray.Projects;
@@ -83,7 +83,7 @@ function addByNameWithChild2(name, id, idwr, level) {
 }
 
 function AddImage(projectId, parId, k, level) {
-    axios.get('http://localhost:51715/Project/'+projectId + '/image')
+    axios.get('http://api.ease-l.xyz/Project/'+projectId + '/image')
         .then(function (response) {
             var jsonarray = response.data.value;
             console.log(jsonarray);
@@ -124,7 +124,7 @@ function AddImage(projectId, parId, k, level) {
 
 
 function addByNameChild(namet, idwr, nid, level) {
-    axios.get('http://localhost:51715/Project/'+namet)
+    axios.get('http://api.ease-l.xyz/Project/'+namet)
         .then(function (response) {
             var jsonarray = response.data.value;
             var name = jsonarray.Name;
@@ -176,7 +176,7 @@ var ExampleApplication = React.createClass({
     render: function () {
         var message = 'Response write in console';
         var level = 2;
-        axios.get('http://localhost:51715/Project')
+        axios.get('http://api.ease-l.xyz/Project')
             .then(function (response) {
                 var jsonarray = response.data.value;
                 for (var i = 0; i < jsonarray.length; i++) {

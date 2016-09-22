@@ -7,13 +7,13 @@ var c = 0;
 var ExampleApplication = React.createClass({
     render: function () {
         var imageId = param("idImage");
-        axios.get('http://localhost:51715/Image/' + imageId)
+        axios.get('http://api.ease-l.xyz/Image/' + imageId)
     .then(function (response) {
         var jsonobject = response.data.value;
         document.getElementById("name").textContent = jsonobject.Name;
         document.getElementById("canvas").src = jsonobject.Url;
         if(jsonobject.Comments.length > 0) {
-            axios.get('http://localhost:51715/Image/' + imageId + '/comment')
+            axios.get('http://api.ease-l.xyz/Image/' + imageId + '/comment')
                 .then(function (response) {
                     for (var i = 0; i < response.data.value.length; ++i) {
                         var jsonobject = response.data.value[i];

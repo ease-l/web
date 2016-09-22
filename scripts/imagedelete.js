@@ -19,7 +19,7 @@ function deli() {
     var projectId = param("idProject");
     axios({
             method: 'delete',
-            url: 'http://localhost:51715/Project/' + projectId + '/image/' + imageId,
+            url: 'http://api.ease-l.xyz/image/'+ imageId,
             data: {}
         }
     )

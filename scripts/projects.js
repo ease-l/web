@@ -8,7 +8,7 @@ function AddProjectToProject (id) {
     if(name != null) {
         axios({
                 method: 'post',
-                url: 'http://localhost:51715/project/' + id + '/project',
+                url: 'http://api.ease-l.xyz/project/' + id + '/project',
                 data: {
                     Name: name,
                 }
