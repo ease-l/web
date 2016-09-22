@@ -116,6 +116,7 @@ function AddImage(projectId, parId, k, level) {
         });
 }
 
+
 function addByNameChild(namet, idwr, nid, level) {
     axios.get('http://localhost:51715/Project/'+namet)
         .then(function (response) {
