@@ -1,8 +1,16 @@
-
-
-img {
+div#cont {
+    width: 350px;
+    height: 300px;
     margin-left: 30%;
-    width: 40%;
+    position: relative;
+    cursor: crosshair;
+}
+canvas {
+    position: absolute;}
+img#canvas {
+    width:100%;
+    height:100%;
+    position: absolute;
 }
 textarea {
     margin-left:  30%;
@@ -10,7 +18,9 @@ textarea {
 }
 button.c {
     margin-left: 60%;
-    width: 10%;
+    width: 12%;
+    margin-bottom: 7px;
+    margin-top: 10px;
 }
 p.a {
     margin-left: 30%;
@@ -43,4 +53,42 @@ li.plus {
     margin-bottom: 100%;
     top: 2cm;
     margin-left: -10%;
+}
+
+#delete_image{
+
+}
+
+.textarea{
+    border-radius: 5px;
+}
+#name2{
+    font-family: "Times New Roman";
+}
+
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-right: 53%;
+}
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+#upload2{
+    width:50%;
+}
+
+#upload3{
+    position: relative;
+    margin-left:30%;
 }

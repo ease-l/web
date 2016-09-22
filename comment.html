@@ -6,10 +6,23 @@
     <script type="text/babel" src="scripts/test.js"></script>
 </head>
 <body>
+<script src="scripts/readImage.js"></script>
+<script src="scripts/uploadImage.js"></script>
+<script src="build/react.js"></script>
+<script src="build/react-dom.js"></script>
+<script src="scripts/postcomment.js"></script>
+<script src="scripts/imagedelete.js"></script>
+<script src="scripts/js.js"></script>
+<script src="scripts/dinamic_add.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <table width="100%">
     <tr>
-        <td colspan="3"><h1 id="main_header"><i><font color="#32CD32">EASE - L</font></i></h1></td>
+        <td colspan="3">
+            <label class="control-label " ></label>
+            <input id="back_button" type="button" class="btn btn-default" onclick="history.back();" value="Back"/>
+            <div id="check"><input  type="checkbox" id="deleteBox" unchecked></div>
+            <h1 id="main_header"><i><font color="#32CD32">EASE - L</font></i></h1>
+        </td>
     </tr>
     <tr width="100%">
         <td width="25%">
@@ -25,17 +38,22 @@
             <h1>
                 <center id="name">icon</center>
             </h1>
-            <img id="image" src="res/drawable/noImage.png" alt="No image">
-            <a href="index.html"><button type="button" class="c" onclick="deli()">Delete image</button></a>
+            <div id="cont">
+                <img id="canvas" />
+                <canvas id="image" width="400px" height="300px"></canvas>
+            </div>
+            <button id="delete_image" onclick="deli()" type="button" class="btn btn-info" >Delete image</button>
+            <div id="upload3"><input type="file" class="form-control" id="upload2" value="read" onchange="onFilesSelect2(this)"/></div>
+            <button type="button" class="btn btn-default c" onclick="upload2()" >Upload</button>
             <p>
-            <form><textarea id="namec" placeholder="Name of your comment" rows="1"></textarea></form>
+            <form><textarea class="textarea" id="namec" placeholder="Name of your comment" rows="1"></textarea></form>
             </p>
             <p>
-            <form><textarea id="comment" placeholder="Write your comment" rows="6"></textarea></form>
+            <form><textarea class="textarea" id="comment" placeholder="Write your comment" rows="6"></textarea></form>
             </p>
             <p>
             <form>
-                <button type="button" class="c" onclick="postc()">Write</button>
+                <button type="button" class="btn btn-success c" onclick="postc()">Write</button>
             </form>
             </p>
             <p class="a"><b>Comment</b></p>
@@ -53,16 +71,11 @@
 <div id ="textfrominput">
 
 </div>
+<link rel="stylesheet" href="css/commentcss.css" type="text/css">
+<script src="scripts/attachment.js"></script>
 <script src="https://npmcdn.com/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-<script src="build/react.js"></script>
-<script src="build/react-dom.js"></script>
-<script src="scripts/postcomment.js"></script>
-<script src="scripts/imagedelete.js"></script>
-<script src="scripts/js.js"></script>
-<script src="scripts/dinamic_add.js"></script>
 <script type="text/babel" src="scripts/imagewatch.js"></script>
-<link rel="stylesheet" href="css/commentcss.css" type="text/css">
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 </body>
 </html>

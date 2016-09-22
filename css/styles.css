@@ -77,6 +77,67 @@ tr.input{
 #spisok{
     position: relative;
     left: 30%;
+    background-color: white;
+    opacity: 1;
+}
+.ulli{
+    background-color: white;
+}
+ul{
+    background-color: white;
+}
+li{
+    background-color: white;
+}
+a{
+    background-color: white;
 }
 
+.alert{
+    background-color: white;
+    border-color: white;
+    border: inherit;
+    padding: 0;
+
+}
+.alert-success{
+    background-color: white;
+    border-color: white;
+    border: inherit;
+    padding: 0;
+}
+
+#back_button{
+    position: relative;
+    margin-left: 1cm;
+    margin-top: 1cm;
+}
+
+#top_navbar{
+
+}
+
+#add_button{
+
+}
+#input{
+    margin-left: 20%;
+
+    width: auto;
+}
+
+#bottom-header{
+    display: inline;
+}
+#check{
+    float: right;
+}
+
+#twobuttons{
+    text-align: center;
+}
+
+#button_choose_image{
+    margin-right: 10px;
+}
 
