@@ -1,14 +1,12 @@
 function addByName( idwr) {
-    console.log("++++++");
+    console.log("Kapec polni");
     var level = 2;
     axios.get('http://localhost:51715/Project/'+idwr)
         .then(function (response) {
             var jsonarray = response.data.value;
             console.log(jsonarray);
             var name = jsonarray.Name;
-            console.log(jsonarray);
             if(jsonarray.Images.length > 0){
-                console.log(name);
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon2">'+
                 '<a onclick="tree(\''+idwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+idwr+'\');">' + name + '</p></li>');
                 var div = document.createElement('li');
@@ -17,7 +15,6 @@ function addByName( idwr) {
                 div.innerHTML = newrow;
                 document.getElementById("spisok").appendChild(div);
                 if(jsonarray.Images.length > 0) {
-                    console.log("+" + name);
                     AddImage(idwr, idwr, 0, level);
                 }
             }else{
@@ -91,6 +88,15 @@ function AddImage(projectId, parId, k, level) {
             var jsonarray = response.data.value;
             console.log(jsonarray);
             for(var i = 0; i < jsonarray.length; i++){
+                var testidwr = parId + (i+k);
+                var newrow = ('<li id=\'' + testidwr +'\''+  'name = "'+ testidwr +'"  class="icon2" style="display: none;">'+
+                '<a onclick="tree(\''+testidwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+testidwr+'\');">' + name + '</p></li>');
+                var div = document.createElement('li');
+                div.style.marginLeft = 1.5*level + "%";
+                div.className = "alert alert-success";
+                div.innerHTML = newrow;
+                document.getElementById(parId).appendChild(div);
+
                 var nameIm = jsonarray[i].Name;
                 var imageId = jsonarray[i].Id;
                 var url = jsonarray[i].Url;
@@ -101,14 +107,14 @@ function AddImage(projectId, parId, k, level) {
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
-               // document.getElementById(parId).appendChild(div);
+                // document.getElementById(parId).appendChild(div);
                 var url2 = "http://localhost:63342/r-template/comment.html?idImage=" +imageId+  "&idProject="+projectId;
                 var MyComponent = React.createClass({
                     render: function() {
                         return ( <a className = "url" href={url2}><li id={parId+''+(k+i)} className="icon4" style={{display: 'block'}}>{nameIm}</li></a>);
                     }
                 });
-                ReactDOM.render(<MyComponent />, document.getElementById(parId));
+                ReactDOM.render(<MyComponent />, document.getElementById(testidwr));
             }
         })
         .catch(function (error) {
@@ -196,4 +202,3 @@ ReactDOM.render(
     <ExampleApplication />,
     document.getElementById('textfrominput')
 );
-
