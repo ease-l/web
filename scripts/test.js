@@ -51,6 +51,8 @@ function addByNameWithChild(l, id, level) {
             div.className = "alert alert-success";
             div.innerHTML = newrow;
             document.getElementById("spisok").appendChild(div);
+
+
             for (var j = 0; j < projectMas.length; j++) {
                 addByNameChild(projectMas[j], id + '' + j, id, level);
             }
@@ -99,7 +101,14 @@ function AddImage(projectId, parId, k, level) {
                 div.style.marginLeft = 1.5*level + "%";
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
-                document.getElementById(parId).appendChild(div);
+               // document.getElementById(parId).appendChild(div);
+                var url2 = "http://localhost:63342/r-template/comment.html?idImage=" +imageId+  "&idProject="+projectId;
+                var MyComponent = React.createClass({
+                    render: function() {
+                        return ( <a className = "url" href={url2}><li id={parId+''+(k+i)} className="icon4" style={{display: 'block'}}>{nameIm}</li></a>);
+                    }
+                });
+                ReactDOM.render(<MyComponent />, document.getElementById(parId));
             }
         })
         .catch(function (error) {
