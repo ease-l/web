@@ -100,7 +100,7 @@ function AddImage(projectId, parId, k, level) {
                 var nameIm = jsonarray[i].Name;
                 var imageId = jsonarray[i].Id;
                 var url = jsonarray[i].Url;
-                var newrow = ('<a class = "url" href="http://localhost:63342/r-template/comment.html?idImage=' +imageId+  '&idProject='+projectId+'">'
+                var newrow = ('<a class = "url" href="http://ease-l.comuf.com/comment.html?idImage=' +imageId+  '&idProject='+projectId+'">'
                 + '<li id=\'' + parId+ '' + (k+i) +'\''+ ' name = "'+ imageId +'" style="display: none;" class="icon4">'
                 +nameIm+'</li></a>');
                 var div = document.createElement('li');
@@ -108,7 +108,7 @@ function AddImage(projectId, parId, k, level) {
                 div.className = "alert alert-success";
                 div.innerHTML = newrow;
                 // document.getElementById(parId).appendChild(div);
-                var url2 = "http://localhost:63342/r-template/comment.html?idImage=" +imageId+  "&idProject="+projectId;
+                var url2 = "http://ease-l.comuf.com/comment.html?idImage=" +imageId+  "&idProject="+projectId;
                 var MyComponent = React.createClass({
                     render: function() {
                         return ( <a className = "url" href={url2}><li id={parId+''+(k+i)} className="icon4" style={{display: 'block'}}>{nameIm}</li></a>);
