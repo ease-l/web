@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 <table width="100%">
+
     <tr>
         <td><h1 id="main_header"><i><font color="#32CD32">EASE - L</font></i></h1></td>
     </tr>
@@ -27,7 +28,7 @@
                     <div id="bottom-header">
                         <input id="input" name="input" type="text" class="form-control col-sm-3" value="Name" placeholder="New Project">
                         <input id="add_button" type="button" class="btn btn-success col-sm-3" onclick="add()" value="Add new project"><label for="check" class="control-label " >Delete Project</label>
-                        <div id="check"><input  type="checkbox" id="deleteBox" unchecked></div>
+                        <div id="check"><input  type="checkbox" id="deleteBox" unchecked>Click the checkbox to delete item</div>
                         <input type="file" class="" id="upload" value="read" onchange="onFilesSelect(this)"/>
                     </div>
 
@@ -37,6 +38,7 @@
             </div>
         </td>
     </tr>
+
     <tr id="twobuttons">
         <td>
             <div id="for2buttons">
@@ -44,9 +46,19 @@
             </div>
         </td>
     </tr>
+
     <tr>
         <td>
-            <ul id="spisok" class="parent">
+            <div style="margin-left: 5%; width: 15%; margin-top: 2%">To add project to project</div>
+            <div style="margin-left: 5%; width: 15%">click on necessary project,</div>
+            <div style="margin-left: 5%; width: 15%">enter name and click</div>
+            <div style="margin-left: 5%; width: 15%">"Add new project" button</div>
+
+            <div style="margin-left: 5%; width: 15%; margin-top: 1%">To add image to project,</div>
+            <div style="margin-left: 5%; width: 15%">click on necessary project</div>
+            <div style="margin-left: 5%; width: 15%">and click "Select file" button</div>
+
+            <ul style="margin-top: -14%" id="spisok" class="parent">
 
             </ul>
         </td>
