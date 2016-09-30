@@ -23,6 +23,11 @@ a.url{
     color:black;
     text-decoration:none;
 }
+
+div.alph{
+    opacity: 0.5;
+}
+
 li.icon {
     background-image: url("../res/drawable/folder.png");
     background-repeat: no-repeat;
@@ -140,5 +145,4 @@ a{
 #button_choose_image{
     margin-right: 10px;
 }
-
 
