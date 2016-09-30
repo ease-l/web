@@ -19,12 +19,12 @@ function AddProjectToProject (id) {
                 return;
             })
             .catch(function (error) {
-                console.log(error.toString());
+               // console.log(error.toString());
                 return;
             });
     }else{
         alert("Write not null name");
     }
     alert("Sucsess add project with name " + name);
-    console.log("Add project " + name + " to project with id = " + id);
+   // console.log("Add project " + name + " to project with id = " + id);
 }

@@ -13,7 +13,7 @@ var ExampleApplication = React.createClass({
                 document.getElementById("comments").appendChild(div);
             })
             .catch(function (error) {
-                console.log(error.toString());
+               // console.log(error.toString());
             });
         return ;
     }

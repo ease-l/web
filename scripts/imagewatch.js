@@ -60,12 +60,12 @@ var ExampleApplication = React.createClass({
                     }
                 })
                 .catch(function (error) {
-                    console.log(error.toString());
+                    //console.log(error.toString());
                 });
         }
     })
     .catch(function (error) {
-        console.log(error.toString());
+       // console.log(error.toString());
         alert("Bad id");
     });
 return ;

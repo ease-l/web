@@ -1,10 +1,10 @@
 function addByName( idwr) {
-    console.log("Kapec polni");
+   // console.log("Kapec polni");
     var level = 2;
     axios.get('http://api.ease-l.xyz/Project/'+idwr)
         .then(function (response) {
             var jsonarray = response.data.value;
-            console.log(jsonarray);
+           // console.log(jsonarray);
             var name = jsonarray.Name;
             if(jsonarray.Images.length > 0){
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idwr +'"  class="icon2">'+
@@ -28,7 +28,7 @@ function addByName( idwr) {
             }
         })
         .catch(function (error) {
-            console.log(error.toString());
+           // console.log(error.toString());
         });
 }
 
@@ -58,7 +58,7 @@ function addByNameWithChild(l, id, level) {
             }
         })
         .catch(function (error) {
-            console.log(error.toString());
+           // console.log(error.toString());
         });
 }
 
@@ -78,7 +78,7 @@ function addByNameWithChild2(name, id, idwr, level) {
             }
         })
         .catch(function (error) {
-            console.log(error.toString());
+           // console.log(error.toString());
         });
 }
 
@@ -86,7 +86,7 @@ function AddImage(projectId, parId, k, level) {
     axios.get('http://api.ease-l.xyz/Project/'+projectId + '/image')
         .then(function (response) {
             var jsonarray = response.data.value;
-            console.log(jsonarray);
+            //console.log(jsonarray);
             for(var i = 0; i < jsonarray.length; i++){
                 var testidwr = parId + (i+k);
                 var newrow = ('<li id=\'' + testidwr +'\''+  'name = "'+ testidwr +'"  class="icon2" style="display: none;">'+
@@ -118,7 +118,7 @@ function AddImage(projectId, parId, k, level) {
             }
         })
         .catch(function (error) {
-            console.log(error.toString());
+            //console.log(error.toString());
         });
 }
 
@@ -130,8 +130,8 @@ function addByNameChild(namet, idwr, nid, level) {
             var name = jsonarray.Name;
             var idname = jsonarray.Id;
             var projectMas = jsonarray.Projects;
-            console.log(jsonarray);
-            console.log(namet);
+            /*console.log(jsonarray);
+            console.log(namet);*/
             if(projectMas.length > 0){
                 var newrow = ('<li id=\'' + idwr +'\''+ ' name = "'+ idname +'" style="display: none;" class="icon2">'+
                 '<a onclick="tree(\''+idwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+idname+'\');" >'+name+'</p></li>');
@@ -146,7 +146,7 @@ function addByNameChild(namet, idwr, nid, level) {
                 level++;
                 addByNameWithChild2(name, idname, idwr, level);
             }else if(jsonarray.Images.length > 0){
-                console.log(name);
+               // console.log(name);
                 var newrow = ('<li id=\'' + idwr +'\''+  'name = "'+ idname +'" style="display: none;" class="icon2">'+
                 '<a onclick="tree(\''+idwr+'\')" rollapp-href=""><p oncontextmenu="AddProjectToProject(\''+idname+'\');" >' + name + '</p></li>');
                 var div = document.createElement('li');
@@ -168,7 +168,7 @@ function addByNameChild(namet, idwr, nid, level) {
             }
         })
         .catch(function (error) {
-            console.log(error.toString());
+           // console.log(error.toString());
         });
 }
 
@@ -181,7 +181,7 @@ var ExampleApplication = React.createClass({
                 var jsonarray = response.data.value;
                 for (var i = 0; i < jsonarray.length; i++) {
                     var id = jsonarray[i].Id;
-                    console.log(jsonarray[i]);
+                   // console.log(jsonarray[i]);
                     var projectMas = jsonarray[i].Projects;
                     if(projectMas.length > 0){
                         addByNameWithChild(id, id, level);
@@ -191,7 +191,7 @@ var ExampleApplication = React.createClass({
                 }
             })
             .catch(function (error) {
-                console.log(error.toString());
+               // console.log(error.toString());
             });
         return null;
     }

@@ -7,7 +7,7 @@
  */
 
 function appendFileInfo(tbody, data) {
-    console.log("appendFileInfo");
+    //console.log("appendFileInfo");
     var tr = document.createElement('tr');
     for(var j = 0; j < data.length; j++) {
         td = document.createElement('td');
@@ -25,7 +25,7 @@ function appendFileInfo(tbody, data) {
  */
 
 function makePreview(image, a) {
-    console.log("makePreview");
+   // console.log("makePreview");
     var img = image,
         w = img.width, h = img.height,
         s = w / h;
@@ -50,7 +50,7 @@ function makePreview(image, a) {
  */
 
 function onFilesSelect(e) {
-    console.log("onFilesSelect");
+  //  console.log("onFilesSelect");
     // получаем объект FileList
     var files = e.files,
         // div, куда помещается таблица с информацией о файлах
@@ -69,7 +69,7 @@ function onFilesSelect(e) {
         data;
 
     // Чистим контейнер с таблицей
-    console.log(output);
+   // console.log(output);
     output.innerHTML = '';
 
     // Вставляем в таблицу её тело
@@ -84,7 +84,7 @@ function onFilesSelect(e) {
         // Если в файле содержится изображение
         if(/image.*/.test(file.type)) {
             // узнаём информацию о нём
-            console.log("name:"+file.name+"   type:"+ file.type+"    size"+file.size);
+           // console.log("name:"+file.name+"   type:"+ file.type+"    size"+file.size);
 
             data = [file.name, file.type, file.size];
 
@@ -92,7 +92,7 @@ function onFilesSelect(e) {
             fileReader.readAsArrayBuffer(file);
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
-                console.log(imageBytes);
+               // console.log(imageBytes);
                 upload();
             }
 
@@ -170,7 +170,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob) {
         // Если в файле содержится изображение
         if(/image.*/.test(file.type)) {
             // узнаём информацию о нём
-            console.log("name:"+file.name+"   type:"+ file.type+"    size"+file.size);
+           // console.log("name:"+file.name+"   type:"+ file.type+"    size"+file.size);
 
             data = [file.name, file.type, file.size];
 
@@ -178,7 +178,7 @@ if(window.File && window.FileReader && window.FileList && window.Blob) {
             fileReader.readAsArrayBuffer(file);
             fileReader.onload = function () {
                 var imageBytes = fileReader.result;
-                console.log(imageBytes);
+              //  console.log(imageBytes);
                 upload();
             }
 

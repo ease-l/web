@@ -24,7 +24,7 @@ function deli() {
         }
     )
         .then(function (response) {
-            console.log(response);
+           // console.log(response);
             window.history.back();
         })
         .catch(function (error) {

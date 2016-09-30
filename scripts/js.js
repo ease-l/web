@@ -4,7 +4,7 @@ var uploadProjectId;
 function tree(liter) {
     lit=liter;
     var s =  document.getElementById(lit).innerHTML;
-    console.log(s);
+   // console.log(s);
     uploadProjectId = "";
     for(var i = 0; i < s.length; i++){
         if(s[i] == 'j' && s[i+1] == 'e'&& s[i+2] == 'c'&& s[i+3] == 't'&& s[i+4] == '('&& s[i+5] == '\''){
@@ -13,7 +13,7 @@ function tree(liter) {
             break;
         }
     }
-    console.log(uploadProjectId);
+   // console.log(uploadProjectId);
     var e = document.getElementById("deleteBox");
     if(e!=null && e.checked) {
 
@@ -30,7 +30,7 @@ function tree(liter) {
                     return;
                 })
                 .catch(function (error) {
-                    console.log(error.toString());
+                   // console.log(error.toString());
                     return;
                 });
         }

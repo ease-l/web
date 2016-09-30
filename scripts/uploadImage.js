@@ -3,16 +3,16 @@
  */
 
 function upload() {
-    console.log("+");
+    //console.log("+");
     var data = new FormData();
     data.append("uploadImage", document.getElementById('upload').files[0]);
     axios.put("http://api.ease-l.xyz/Download", data).then(function (response) {
         var url = response.data.value.Result;
         uploadimageup(url);
-        console.log(response.data.value);
+        //console.log(response.data.value);
     })
         .catch(function (error) {
-            console.log(error)
+            //console.log(error)
         });
 
 }
@@ -21,7 +21,7 @@ function upload() {
 function uploadimageup(url) {
     var data = {};
     data.Name = document.getElementById("upload").textContent;
-    console.log("uploadimageup");
+    //console.log("uploadimageup");
     var data = {};
     var imageName = "";
     var s = document.getElementById("upload").textContent;
@@ -36,11 +36,11 @@ function uploadimageup(url) {
     data.Url = url;
     axios.post("http://api.ease-l.xyz/Project/"+uploadProjectId+"/image",data).
     then(function (response) {
-        console.log(uploadProjectId);
+        //console.log(uploadProjectId);
             alert("Image Add");
         window.location.reload();
     }).catch(function (error) {
-        console.log(error)
+        //console.log(error)
     });
 }
 
@@ -82,16 +82,16 @@ function upload2() {
             }
         )
             .then(function (response) {
-                console.log(response);
+                //console.log(response);
                 window.location.reload();
             })
             .catch(function (error) {
                 alert(error.toString());
             });
-        console.log(response.data.value);
+        //console.log(response.data.value);
     })
         .catch(function (error) {
-            console.log(error)
+            //console.log(error)
         });
 
 }

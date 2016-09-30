@@ -17,9 +17,9 @@ function param(Name)
 }
 function postc() {
     var imageId = param("idImage");
-    console.log("Ok - " + imageId);
+   // console.log("Ok - " + imageId);
     var projectId = param("idProject");
-    console.log(projectId);
+   // console.log(projectId);
     if(document.getElementById("namec").value == "") {
         alert('Name of comment is empty, please, fill it');
         return;
@@ -45,7 +45,7 @@ function postc() {
             return;
         })
         .catch(function (error) {
-            console.log(error.toString());
+          //  console.log(error.toString());
             return;
         });
 }//khgvkigh

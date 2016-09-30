@@ -13,7 +13,7 @@ function add() {
             return;
         })
         .catch(function (error) {
-            console.log(error.toString());
+          //  console.log(error.toString());
             return;
         });
 }
