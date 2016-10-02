@@ -80,6 +80,8 @@ tr.input{
     left: 30%;
     background-color: white;
     opacity: 1;
+    margin-top: -10%;
+
 }
 .ulli{
     background-color: white;
@@ -140,5 +142,8 @@ a{
 
 #button_choose_image{
     margin-right: 10px;
+}
+
+#spismarg{
 }
 
